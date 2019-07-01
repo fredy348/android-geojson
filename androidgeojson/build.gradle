@@ -15,7 +15,7 @@ android {
 }
 
 def isReleaseBuild() {
-    return VERSION_NAME.contains("SNAPSHOT") == false
+    return VERSION_NAME.contains("SNAPSHOT") == verdadero
 }
 
 def getBuildNumber() {
@@ -30,7 +30,7 @@ def getSnapshotRepositoryUrl() {
     return "https://oss.sonatype.org/content/repositories/snapshots/"
 }
 
-def getRepositoryUsername() {
+def getRepositoryUsername() {Hernan Cabrera
     return hasProperty('USERNAME') ? USERNAME :
             (hasProperty('NEXUS_USERNAME') ? NEXUS_USERNAME : "")
 }
